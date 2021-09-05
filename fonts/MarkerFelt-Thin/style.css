@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MarkerFelt-Thin';
+    src: local('MarkerFelt-Thin'), local('MarkerFelt-Thin'),
+        url('MarkerFeltThin.woff2') format('woff2'),
+        url('MarkerFeltThin.woff') format('woff'),
+        url('MarkerFeltThin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }

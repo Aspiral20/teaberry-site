@@ -1,0 +1,55 @@
+/* 1919 - 1440 */
+@media screen and (max-width: 1919px) {
+    .products .slick-prev {
+        left: 24.8%;
+    }
+
+    .products .slick-next {
+        right: 24.8%;
+    }
+
+    body #carousel {
+        max-width: 1440px;
+    }
+}/* 1439 - 1200 */
+@media screen and (max-width: 1439px) {
+    .products .slick-prev {
+        left: 275px;
+    }
+
+    .products .slick-next {
+        right: 195px;
+    }
+
+    body #carousel {
+        max-width: 1200px;
+    }
+
+    #carousel .products .product {
+        margin: 0;
+    }
+}
+/* 1199 - 1024 */
+@media screen and (max-width: 1199px) {
+
+}
+/* 1023 - 768 */
+@media screen and (max-width: 1023px) {
+
+}
+/* 767 - 425 */
+@media screen and (max-width: 767px) {
+
+}
+/* 424 - 375 */
+@media screen and (max-width: 424px) {
+
+}
+/* 374 - 320 */
+@media screen and (max-width: 374px) {
+
+}
+/* 319 - 0 */
+@media screen and (max-width: 319px) {
+
+}
