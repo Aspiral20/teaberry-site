@@ -14,11 +14,11 @@
 }/* 1439 - 1200 */
 @media screen and (max-width: 1439px) {
     .products .slick-prev {
-        left: 275px;
+        left: 240px;
     }
 
     .products .slick-next {
-        right: 195px;
+        right: 240px;
     }
 
     body #carousel {
@@ -31,7 +31,20 @@
 }
 /* 1199 - 1024 */
 @media screen and (max-width: 1199px) {
+    #header, #main, #strengths, #info, #carousel, #shares, #properties, #collect, #footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
+
+
+    #footer #footer-container {
+        grid-template-columns: auto repeat(3, auto) 180px;
+    }
+
+    #footer-container #footer-logo img {
+        margin-right: 0;
+    }
 }
 /* 1023 - 768 */
 @media screen and (max-width: 1023px) {

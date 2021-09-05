@@ -30,7 +30,7 @@ $(document).ready(() => {
     function products(id, slidesNumber) {
         $('#' + id + ' .products').slick({
             centerMode: true,
-            centerPadding: '640px',
+            centerPadding: '50%',
             slidesToShow: 1,
             asNavFor: '#' + id + ' .products-nav',
             variableWidth: true,
