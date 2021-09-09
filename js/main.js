@@ -146,7 +146,7 @@ $(document).ready(() => {
 
     $('#reserve-button > button').click(() => {
 
-        function reserveErrorFunct(nameVal,int) {
+        function reserveErrorFunct(nameVal, int) {
             $(reserveError[int]).hide();
             nameVal.removeClass('border-error');
             if (!nameVal.val()) {
@@ -154,6 +154,7 @@ $(document).ready(() => {
                 nameVal.addClass('border-error');
             }
         }
+
         if (order.val() && count.val() && name.val() && phone.val()) {
             //Ajax content: mail.php (success)
             $('#reservation-sent').show();
@@ -176,7 +177,7 @@ $(document).ready(() => {
             });
         } else {
             for (let i = 0; i < reserveError.length; i++) {
-                reserveErrorFunct($(massiveError[i]),i);
+                reserveErrorFunct($(massiveError[i]), i);
             }
         }
     });
@@ -213,5 +214,48 @@ $(document).ready(() => {
     new WOW({
         animateClass: 'animate__animated'
     }).init();
+
+    let textLeftContainer = $('#properties-show-text-container .text-left-container');
+    let textRightContainer = $('#properties-show-text-container .text-right-container');
+
+    let massivePropertyCircle768 = [
+        $('#property1'),
+        $('#property2'),
+        $('#property3'),
+        $('#property4'),
+        $('#property5'),
+        $('#property6')
+    ];
+    let massivePropertyText768 = [
+        $(textLeftContainer[0]),
+        $(textLeftContainer[1]),
+        $(textLeftContainer[2]),
+        $(textRightContainer[0]),
+        $(textRightContainer[1]),
+        $(textRightContainer[2])
+    ];
+
+    let propertiesShowTextContainer = $('#properties-show-text-container');
+    let maxlengthProperties = textLeftContainer.length + textRightContainer.length;
+    propertiesShowTextContainer.hide();
+
+    function showHideProperty(int) {
+        $(massivePropertyCircle768[int]).on('click', () => {
+            $('#property-center img').hide();
+            $('#property-center').hide();
+            propertiesShowTextContainer.css('display', 'flex');
+            $(massivePropertyText768[int]).show();
+
+            for (let j = 0; j < maxlengthProperties; j++) {
+                if (int !== j) {
+                    $(massivePropertyText768[j]).hide();
+                }
+            }
+        });
+    }
+    for (let i = 0; i < maxlengthProperties; i++) {
+        showHideProperty(i);
+    }
+
 
 });

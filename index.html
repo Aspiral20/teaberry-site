@@ -21,12 +21,18 @@
 <div id="fon">
     <div id="header">
         <div id="menu">
-            <a href="#carousel" class="menu-item">Ассортимент</a>
-            <a href="#collect" class="menu-item">Как мы собираем чай</a>
-            <a href="#shares" class="menu-item">Наши акции</a>
-            <a href="#" class="menu-item"><img src="images/logo.png" alt=""></a>
-            <a href="#properties" class="menu-item">Полезные свойства</a>
-            <a href="#footer" class="menu-item">Контакты</a>
+            <div id="menu-item-startblock">
+                <a href="#carousel" class="menu-item">Ассортимент</a>
+                <a href="#collect" class="menu-item">Как мы собираем чай</a>
+                <a href="#shares" class="menu-item">Наши акции</a>
+            </div>
+            <div id="menu-item-logo">
+                <a href="#" class="menu-item"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div id="menu-item-endblock">
+                <a href="#properties" class="menu-item">Полезные свойства</a>
+                <a href="#footer" class="menu-item">Контакты</a>
+            </div>
         </div>
     </div>
     <div id="main">
@@ -50,8 +56,8 @@
 </div>
 
 <div id="strengths">
-    <img src="images/startLeaves.png" alt="" id="leaves1">
-    <img src="images/endLeaves.png" alt="" id="leaves2">
+    <img id="leaves1" src="images/startLeaves.png" alt="">
+    <img id="leaves2" src="images/endLeaves.png" alt="">
     <h2 class="text-header">
         Почему выбирают нас?
     </h2>
@@ -625,7 +631,9 @@
 <div id="shares">
     <img class="shares-bgabsolute" src="images/shares-bgabsolute.png" alt="">
     <div id="shares-container" class="wow animate__flipInX">
-        <img class="shares-absolute-img" src="images/shares-absolute-img.png" alt="">
+        <div id="shares-leaves">
+            <img class="shares-absolute-img" src="images/shares-absolute-img.png" alt="">
+        </div>
         <h2 class="text-header">
             Акция для новых клиентов
         </h2>
@@ -664,109 +672,174 @@
     </h2>
     <div id="properties-container" class="wow animate__rotateIn">
         <div id="center-container">
+            <div id="properties-circle-768">
+                <div class="circle-max" id="property1">
+                    <div class="circle-min"></div>
+                </div>
+                <div class="circle-max" id="property2">
+                    <div class="circle-min"></div>
+                </div>
+                <div class="circle-max" id="property3">
+                    <div class="circle-min"></div>
+                </div>
+                <div class="circle-max" id="property4">
+                    <div class="circle-min"></div>
+                </div>
+                <div class="circle-max" id="property5">
+                    <div class="circle-min"></div>
+                </div>
+                <div class="circle-max" id="property6">
+                    <div class="circle-min"></div>
+                </div>
+            </div>
             <div id="property-center">
                 <img src="images/property-center.png" alt="">
             </div>
-        </div>
-        <div class="content-circle-left first">
-            <div class="text-left">
-                Чай богат полезными микроэлементами
-            </div>
-            <div class="left-bar">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="262.5px" height="55.5px">
-                    <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
-                          stroke-linejoin="miter" fill="none"
-                          d="M261.500,1.500 L222.500,54.500 L0.500,54.500 "/>
-                </svg>
-                <div class="circle-max">
-                    <div class="circle-min"></div>
+            <div id="properties-show-text-container">
+                <div class="text-left-container">
+                    <div class="text-left">
+                        Чай богат полезными микроэлементами
+                    </div>
+                </div>
+                <div class="text-left-container">
+                    <div class="text-left">
+                        Чай бодрит дух, повышает активность мозга, улучшает память
+                    </div>
+                </div>
+                <div class="text-left-container">
+                    <div class="text-left">
+                        Чай нормализует деятельность сердца, кровеносных сосудов, пищеварительной системы
+                    </div>
+                </div>
+                <div class="text-right-container">
+                    <div class="text-right">
+                        Чай эффективно предотвращает кариес
+                    </div>
+                </div>
+                <div class="text-right-container">
+                    <div class="text-right">
+                        Чай снимает усталость и стимулирует обмен веществ
+                    </div>
+                </div>
+                <div class="text-right-container">
+                    <div class="text-right">
+                        Чай подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток
+                        в
+                        раковые
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="content-circle-left second">
-            <div class="text-left">
-                Чай бодрит дух, повышает активность мозга, улучшает память
-            </div>
-            <div class="left-bar">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="322.5px" height="55.5px">
-                    <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
-                          stroke-linejoin="miter" fill="none"
-                          d="M321.500,1.500 L282.500,54.500 L0.500,54.500 "/>
-                </svg>
-                <div class="circle-max">
-                    <div class="circle-min"></div>
+
+        <div id="properties-content-circle">
+            <div class="content-circle-left first">
+                <div class="text-left">
+                    Чай богат полезными микроэлементами
+                </div>
+                <div class="left-bar">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="262.5px" height="55.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M261.500,1.500 L222.500,54.500 L0.500,54.500 "/>
+                    </svg>
+                    <div class="circle-max">
+                        <div class="circle-min"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="content-circle-left third">
-            <div class="text-left">
-                Чай нормализует деятельность сердца, кровеносных сосудов, пищеварительной системы
-            </div>
-            <div class="left-bar">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="352.5px" height="55.5px">
-                    <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
-                          stroke-linejoin="miter" fill="none"
-                          d="M351.500,1.500 L312.500,54.500 L0.500,54.500 "/>
-                </svg>
-                <div class="circle-max">
-                    <div class="circle-min"></div>
+            <div class="content-circle-left second">
+                <div class="text-left">
+                    Чай бодрит дух, повышает активность мозга, улучшает память
+                </div>
+                <div class="left-bar">
+                    <svg class="second-svg-1200"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="322.5px" height="55.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M321.500,1.500 L282.500,54.500 L0.500,54.500 "/>
+                    </svg>
+                    <svg class="second-svg-1024"
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="322.5px" height="55.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M221.500,1.500 L190.500,54.500 L0.500,54.500 "/>
+                    </svg>
+                    <div class="circle-max">
+                        <div class="circle-min"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="content-circle-right first">
-            <div class="text-right">
-                Чай эффективно предотвращает кариес
-            </div>
-            <div class="right-bar">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="284.5px" height="42.5px">
-                    <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
-                          stroke-linejoin="miter" fill="none"
-                          d="M1.500,0.500 L32.500,40.500 L283.500,40.500 "/>
-                </svg>
-                <div class="circle-max">
-                    <div class="circle-min"></div>
+            <div class="content-circle-left third">
+                <div class="text-left">
+                    Чай нормализует деятельность сердца, кровеносных сосудов, пищеварительной системы
+                </div>
+                <div class="left-bar">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="352.5px" height="55.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M351.500,1.500 L312.500,54.500 L0.500,54.500 "/>
+                    </svg>
+                    <div class="circle-max">
+                        <div class="circle-min"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="content-circle-right second">
-            <div class="text-right">
-                Чай снимает усталость и стимулирует обмен веществ
-            </div>
-            <div class="right-bar">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="324.5px" height="55.5px">
-                    <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
-                          stroke-linejoin="miter" fill="none"
-                          d="M1.500,0.500 L40.500,53.500 L323.500,53.500 "/>
-                </svg>
-                <div class="circle-max">
-                    <div class="circle-min"></div>
+            <div class="content-circle-right first">
+                <div class="text-right">
+                    Чай эффективно предотвращает кариес
+                </div>
+                <div class="right-bar">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="284.5px" height="42.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M1.500,0.500 L32.500,40.500 L283.500,40.500 "/>
+                    </svg>
+                    <div class="circle-max">
+                        <div class="circle-min"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="content-circle-right third">
-            <div class="text-right">
-                Чай подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в раковые
+            <div class="content-circle-right second">
+                <div class="text-right">
+                    Чай снимает усталость и стимулирует обмен веществ
+                </div>
+                <div class="right-bar">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="324.5px" height="55.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M1.500,0.500 L40.500,53.500 L323.500,53.500 "/>
+                    </svg>
+                    <div class="circle-max">
+                        <div class="circle-min"></div>
+                    </div>
+                </div>
             </div>
-            <div class="right-bar">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="410.5px" height="55.5px">
-                    <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
-                          stroke-linejoin="miter" fill="none"
-                          d="M1.500,0.500 L40.500,53.500 L409.500,53.500 "/>
-                </svg>
-                <div class="circle-max">
-                    <div class="circle-min"></div>
+            <div class="content-circle-right third">
+                <div class="text-right">
+                    Чай подавляет рост злокачественных опухолей, и существенно снижает риск перерождения клеток в
+                    раковые
+                </div>
+                <div class="right-bar">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="410.5px" height="55.5px">
+                        <path fill-rule="evenodd" stroke="rgb(128, 165, 6)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M1.500,0.500 L40.500,53.500 L409.500,53.500 "/>
+                    </svg>
+                    <div class="circle-max">
+                        <div class="circle-min"></div>
+                    </div>
                 </div>
             </div>
         </div>
