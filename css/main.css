@@ -1317,3 +1317,11 @@
 #menu-close {
     display: none;
 }
+
+#order-button {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 60px;
+    height: 58px;
+}
