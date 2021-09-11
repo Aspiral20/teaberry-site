@@ -49,7 +49,7 @@ $(document).ready(() => {
                     settings: {
                         arrows: false,
                         centerMode: true,
-                        centerPadding: '40px',
+                        centerPadding: '0',
                         slidesToShow: 1
                     }
                 }
@@ -257,5 +257,12 @@ $(document).ready(() => {
         showHideProperty(i);
     }
 
-
+    document.getElementById('burger').onclick = function () {
+        document.getElementById('menu-items').classList.add('open');
+    };
+    document.querySelectorAll('#menu-items > *').forEach((item) => {
+        item.onclick = () => {
+            document.getElementById('menu-items').classList.remove('open');
+        }
+    });
 });

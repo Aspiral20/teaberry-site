@@ -31,24 +31,32 @@
 
 #menu .menu-item {
     text-decoration: none;
-    outline: none;
     font-size: 16px;
     font-family: "Gilroy-Regular", sans-serif;
     color: rgb(46, 50, 42);
 }
 
-#menu-item-startblock .menu-item:last-child,
-#menu-item-endblock .menu-item:last-child {
+#menu-items #menu-items-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#menu-items .menu-item:last-child {
     margin-right: 0;
 }
 
-#menu-item-startblock .menu-item,
-#menu-item-endblock .menu-item {
+#menu-items .menu-item {
     margin-right: 48px;
 }
 
-#menu-item-logo .menu-item {
-    margin: 0 58px;
+#menu-item-logo-second {
+    display: none;
+}
+
+#menu-items #menu-item-logo-first .menu-item {
+    margin-left: 12px;
+    margin-right: 60px;
 }
 
 #main {
@@ -298,6 +306,9 @@
 }
 .order2 {
     order: 2;
+}
+.order3 {
+    order: 3;
 }
 
 #info-leaves {
@@ -1295,4 +1306,14 @@
     right: -14px;
     bottom: 35px;
     transform: rotate(-55deg);
+}
+
+#burger {
+    display: none;
+    font-size: 45px;
+    color: rgb(128, 165, 6);
+}
+
+#menu-close {
+    display: none;
 }
