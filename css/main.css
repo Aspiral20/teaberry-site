@@ -877,7 +877,6 @@
     z-index: 2;
 }
 
-
 #collect-content {
     max-width: 400px;
     z-index: 1;
@@ -1195,15 +1194,7 @@
     width: 100%;
 }
 
-/*.shares-red-input::placeholder {*/
-/*    color: rgba(255, 0, 0, 0.6);*/
-/*}*/
-
 .second-svg-1024 {
-    display: none;
-}
-
-.info-leaves, #leaves2, .collect-leaves {
     display: none;
 }
 
