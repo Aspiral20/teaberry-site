@@ -38,7 +38,7 @@ $(document).ready(() => {
                 {
                     breakpoint: 768,
                     settings: {
-                        arrows: false,
+                        arrows: true,
                         centerMode: true,
                         centerPadding: '80px',
                         slidesToShow: 1
@@ -47,7 +47,7 @@ $(document).ready(() => {
                 {
                     breakpoint: 480,
                     settings: {
-                        arrows: false,
+                        arrows: true,
                         centerMode: true,
                         centerPadding: '0',
                         slidesToShow: 1

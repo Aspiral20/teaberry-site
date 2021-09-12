@@ -458,7 +458,7 @@
     }
 
     .product {
-        max-width: 280px;
+        max-width: 550px;
         flex-direction: column;
     }
 
@@ -475,9 +475,19 @@
         padding: 30px;
         padding-left: 120px;
     }
+
+    .product-content-submit button {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 618px) {
+
+    .product {
+        max-width: 300px;
+        flex-direction: column;
+    }
+
     #info-container .block-content {
         grid-template-columns: repeat(auto-fill, minmax(280px, auto));
         text-align: center;
@@ -740,8 +750,7 @@
     }
 
     #reservation-container #reservation {
-        padding: 20px;
-        padding-left: 20px;
+        padding: 20px 50px 20px 50px;
     }
 
     #fir-input, #sec-input, #thr-input, #fou-input {
@@ -761,6 +770,10 @@
 
 /* 424 - 375 */
 @media screen and (max-width: 424px) {
+
+    #reservation-container #reservation {
+        padding: 20px;
+    }
 
     #smoke-fon {
         display: none;
@@ -847,6 +860,18 @@
     .text-right-container:nth-child(6)::after {
         right: 6px;
         bottom: -14px;
+    }
+
+    .product {
+        max-width: 280px;
+    }
+
+    .products .slick-prev {
+        left: -8px;
+    }
+
+    .products .slick-next {
+        right: -8px;
     }
 }
 /* 374 - 320 */
@@ -958,6 +983,14 @@
 
     .text-left-container, .text-right-container {
         font-size: 14px;
+    }
+
+    .products .slick-prev {
+        left: -15px;
+    }
+
+    .products .slick-next {
+        right: -15px;
     }
 
 }
