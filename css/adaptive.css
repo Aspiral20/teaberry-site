@@ -148,7 +148,7 @@
         grid-template-columns: auto repeat(3, auto) 180px;
     }
 
-    #collect-container #collect-video iframe {
+    #collect-container #collect-video {
         width: 517px;
     }
 
@@ -365,7 +365,38 @@
             opacity: 0;
             transform: scale(1);
         }
+    }
 
+    .product-nav:hover {
+        background-color: rgb(225, 224, 223);
+    }
+
+    .slick-current:active, .slick-current:hover {
+        background-color: #8fbc62;
+    }
+
+    .animation-circle-max {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgb(128, 165, 6);
+        border-radius: 50%;
+        animation: circle-pulse 2.5s linear infinite;
+    }
+
+    .circle-min {
+        position: relative;
+    }
+
+    .circle-min .layer {
+        display: none;
+        fill: #485c04;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -404,12 +435,12 @@
         justify-content: center;
         min-width: 280px;
         width: 40%;
-        background-color: rgba(255, 255, 255, .9);
+        background-color: rgba(255, 255, 255, 0.6);
         border-radius: 70px;
     }
 
     #menu #menu-items .menu-item {
-        color: rgb(128, 165, 6);
+        color: rgb(100, 129, 4);
         font-family: "Gilroy-Bold", sans-serif;
         text-align: center;
         font-size: 22px;
@@ -423,7 +454,7 @@
     #menu-close {
         display: block;
         position: absolute;
-        color: rgba(255, 255, 255, .9);
+        color: rgba(255, 255, 255, .6);
         font-size: 45px;
         top: 20px;
         right: 36px;
@@ -449,8 +480,8 @@
         left: -130px;
     }
 
-    #collect-container #collect-video iframe {
-        max-width: 100%;
+    #collect-container #collect-video {
+        width: 100%;
     }
 
     #leaves1, #shares .shares-bgabsolute {
@@ -474,10 +505,6 @@
     #reservation-container #reservation {
         padding: 30px;
         padding-left: 120px;
-    }
-
-    .product-content-submit button {
-        width: 100%;
     }
 }
 
@@ -992,9 +1019,4 @@
     .products .slick-next {
         right: -15px;
     }
-
-}
-/* 319 - 0 */
-@media screen and (max-width: 319px) {
-
 }

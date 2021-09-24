@@ -147,6 +147,7 @@ $(document).ready(() => {
     $('#reserve-button > button').click(() => {
 
         function reserveErrorFunct(nameVal, int) {
+            //nameVal это массив со всеми инпутами
             $(reserveError[int]).hide();
             nameVal.removeClass('border-error');
             if (!nameVal.val()) {
@@ -178,6 +179,10 @@ $(document).ready(() => {
         } else {
             for (let i = 0; i < reserveError.length; i++) {
                 reserveErrorFunct($(massiveError[i]), i);
+            }
+            showSelectBlock.removeClass('border-error');
+            if (!order.val()) {
+                showSelectBlock.addClass('border-error');
             }
         }
     });
@@ -217,6 +222,8 @@ $(document).ready(() => {
 
     let textLeftContainer = $('#properties-show-text-container .text-left-container');
     let textRightContainer = $('#properties-show-text-container .text-right-container');
+    let animationCircleMax = $('.animation-circle-max');
+    let circleMinLayer = $('.layer');
 
     let massivePropertyCircle768 = [
         $('#property1'),
@@ -253,9 +260,34 @@ $(document).ready(() => {
             }
         });
     }
+
+    function showHideAnimationClick(int) {
+        $(massivePropertyCircle768[int]).on('click', () => {
+            $(animationCircleMax[int]).show();
+            $(circleMinLayer[int]).show();
+            for (let j = 0; j < animationCircleMax.length; j++) {
+                if (int !== j) {
+                    $(animationCircleMax[j]).hide();
+                    $(circleMinLayer[j]).hide();
+                }
+            }
+        });
+    }
+
+    $(animationCircleMax[0]).show();
+    $(circleMinLayer[0]).show();
+
     for (let i = 0; i < maxlengthProperties; i++) {
         showHideProperty(i);
+        showHideAnimationClick(i);
     }
+
+    let collectPhotoVideo = $('#collect-photo-video');
+
+    collectPhotoVideo.on('click', () => {
+        collectPhotoVideo.hide();
+        $('.rightbot-image .collect-circle img').hide();
+    });
 
     document.getElementById('burger').onclick = function () {
         document.getElementById('menu-items').classList.add('open');
