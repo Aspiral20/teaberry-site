@@ -8,7 +8,7 @@
         right: 24.8%;
     }
 
-    body #carousel {
+    #carousel {
         max-width: 1440px;
     }
 }
@@ -29,7 +29,7 @@
         right: 240px;
     }
 
-    body #carousel {
+    #carousel {
         max-width: 1200px;
     }
 
@@ -45,12 +45,16 @@
         padding-right: 20px;
     }
 
+    #carousel {
+        max-width: 720px;
+    }
+
     #info #info-container {
         align-items: center;
         grid-template-columns: repeat(2,auto);
     }
 
-    body #properties {
+    #properties {
         max-width: 1024px;
         margin: 0 auto;
     }
@@ -157,11 +161,11 @@
     }
 
     .products .slick-prev {
-        left: 133px;
+        left: -15px;
     }
 
     .products .slick-next {
-        right: 133px;
+        right: -15px;
     }
 
     #shares #shares-container {
@@ -260,14 +264,6 @@
 
     #shares-content .shares-relative-img {
         margin: 0 auto;
-    }
-
-    .products .slick-prev {
-        left: 8px;
-    }
-
-    .products .slick-next {
-        right: 8px;
     }
 
     #reservation-container #reservation {
@@ -409,6 +405,11 @@
 
 /* 767 - 425 */
 @media screen and (max-width: 767px) {
+
+    #carousel {
+        max-width: 625px;
+    }
+
     #menu {
         justify-content: space-between;
     }
@@ -611,9 +612,18 @@
         right: 20px;
         top: 20px;
     }
-}
 
-@media screen and (max-width: 590px){
+    .products .product {
+        transform: scale(0.63);
+    }
+
+    #carousel {
+        max-width: 420px;
+    }
+
+    #carousel .text-header {
+        font-size: 35px;
+    }
 
     #choose-container {
         flex-wrap: wrap;
@@ -623,6 +633,9 @@
     #choose-container .choose {
         margin: 10px 10px;
     }
+}
+
+@media screen and (max-width: 590px){
 
     .text-header {
         font-size: 35px;
@@ -832,6 +845,10 @@
 /* 424 - 375 */
 @media screen and (max-width: 424px) {
 
+    #carousel {
+        max-width: 400px;
+    }
+
     #reservation-container #reservation {
         padding: 20px;
     }
@@ -938,6 +955,12 @@
     #collect-video {
         height: 310px;
     }
+
+    .shares-button img {
+        width: 90px;
+        height: 90px;
+        top: -10px;
+    }
 }
 /* 374 - 320 */
 @media screen and (max-width: 374px) {
@@ -954,7 +977,7 @@
         font-size: 14px;
     }
 
-    .content-text .header, #menu #menu-items .menu-item, .product-content-title {
+    .content-text .header, #menu #menu-items .menu-item, .product-content-title, .shares-button {
         font-size: 18px;
     }
 
