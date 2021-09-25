@@ -87,40 +87,73 @@ $(document).ready(() => {
 
     let showSelectBlock = $('#fir-input .reserve-first-select');
     let orderButton = $('#order-button');
-    let selectItem = $('.select-item');
+    let selectItem = '.select-item';
     let order = $('#order');
-    let reserveSelectRight = $('.reserve-select-right');
+    let reserveSelectRight = $('#order-button .reserve-select-right');
+
+    let massiveReserveSelectRight = '.reserve-select-right';
+    let reserveInternBlock = $('.reserve-first-select .select-item-internBlock');
+    let textSelectItemMassive = [
+        $('#white-reserve .text-select-item'),
+        $('#black-reserve .text-select-item'),
+        $('#green-reserve .text-select-item'),
+        $('#mixes-reserve .text-select-item'),
+        $('#oolong-reserve .text-select-item'),
+    ]
+
+
     showSelectBlock.hide();
     orderButton.addClass('all-grid-col');
 
     orderButton.click(() => {
-        // orderButton.toggleClass('all-grid-col');
+        reserveInternBlock.hide();
+
+
         reserveSelectRight.toggleClass('rotate');
         order.toggleClass('radius-botrl');
+
         if (showSelectBlock.css('display') !== 'none') {
             showSelectBlock.hide();
         } else {
             showSelectBlock.show();
         }
-        for (let i = 0; i < selectItem.length; i++) {
-            $(selectItem[i]).click(() => {
-                if (order.val() !== $(selectItem[i]).text()) {
-                    order.val($(selectItem[i]).text());
-                    order.addClass('color-green');
+        for (let i = 0; i < $(selectItem).length; i++) {
+            $($(selectItem)[i]).click(() => {
+
+                let selectImg = $(selectItem + ' ' + massiveReserveSelectRight);
+                $(selectImg[i]).toggleClass('rotate');
+
+
+                if ($(reserveInternBlock[i]).css('display') === 'none') {
+                    $(reserveInternBlock[i]).show();
+                } else {
+                    $(reserveInternBlock[i]).hide();
+                }
+
+                for (let j = 0; j < $(selectItem).length; j++) {
+                    if (i !== j) {
+                        $(reserveInternBlock[j]).hide();
+                        $(selectImg[j]).removeClass('rotate');
+                    }
+                }
+                let textSelectItem = $(textSelectItemMassive[i]);
+
+                for (let j = 0; j < $(textSelectItemMassive[i]).length; j++) {
+                    $(textSelectItem[j]).on('click', () => {
+                        if (order.val() !== $(textSelectItem[j]).text()) {
+                            order.val($(textSelectItem[j]).text());
+                            order.addClass('color-green');
+                        }
+                    });
                 }
             });
         }
-        order.on('keypress', () => {
-            if ($('#order.color-green')) {
-                order.removeClass('color-green');
-            }
-        });
-        selectItem.on('click', () => {
-            showSelectBlock.hide();
-            // orderButton.removeClass('all-grid-col');
-            reserveSelectRight.addClass('rotate');
-            order.removeClass('radius-botrl');
-        });
+    });
+
+    order.on('keypress', () => {
+        if ($('#order.color-green')) {
+            order.removeClass('color-green');
+        }
     });
 
     let reserveError = $('.reserve-error');
@@ -128,6 +161,28 @@ $(document).ready(() => {
     let name = $('#name');
     let phone = $('#phone');
     let massiveError = [order, count, name, phone];
+
+    let carouselContainerMassive = [
+        $('#white1'),$('#white2'),$('#white3'),$('#black1'),$('#black2'),
+        $('#black3'),$('#black4'),$('#black5'),$('#black6'),$('#green1'),
+        $('#green2'),$('#green3'),$('#green4'),$('#green5'),$('#mixes1'),
+        $('#mixes2'),$('#mixes3'),$('#mixes4'),$('#mixes5'),$('#mixes6'),
+        $('#oolong1'),$('#oolong2'),$('#oolong3')
+    ]
+
+    let content = $('.open-modal');
+
+    function carouselContainerBtnClick(i) {
+        $(carouselContainerMassive[i]).on('click', () => {
+            let orderNewValue = $(carouselContainerMassive[i]).attr('data-value');
+            order.val(orderNewValue);
+            order.addClass('color-green');
+        });
+    }
+
+    for (let i = 0; i < carouselContainerMassive.length; i++) {
+        carouselContainerBtnClick(i);
+    }
 
     $('.product-content-submit').click(() => {
         $('#reservation-container').css('display', 'grid');
@@ -180,9 +235,11 @@ $(document).ready(() => {
             for (let i = 0; i < reserveError.length; i++) {
                 reserveErrorFunct($(massiveError[i]), i);
             }
+            reserveInternBlock.removeClass('border-error');
             showSelectBlock.removeClass('border-error');
             if (!order.val()) {
                 showSelectBlock.addClass('border-error');
+                reserveInternBlock.addClass('border-error');
             }
         }
     });

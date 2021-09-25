@@ -206,8 +206,10 @@
 
 /* 1023 - 768 */
 @media screen and (max-width: 1023px) {
+
+
     #header #menu .menu-item {
-        margin: 0 16px;
+        margin: 0 15px;
         order: 2;
     }
 
@@ -224,6 +226,7 @@
         width: 100%;
         text-align: center;
         order: 1;
+        margin-bottom: 10px;
     }
 
     #strengths #strengths-container {
@@ -371,7 +374,7 @@
         background-color: rgb(225, 224, 223);
     }
 
-    .slick-current:active, .slick-current:hover {
+    .product-nav.slick-current:active, .product-nav.slick-current:hover {
         background-color: #8fbc62;
     }
 
@@ -904,8 +907,12 @@
 /* 374 - 320 */
 @media screen and (max-width: 374px) {
 
+    #choose-container .choose {
+        margin: 10px 8px;
+    }
+
     #choose-container .choose, .shares-relative-content .info-discount {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     #collect-content .collect-text, .content-text .text {
