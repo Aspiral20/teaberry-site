@@ -41,7 +41,7 @@ $(document).ready(() => {
                         arrows: true,
                         centerMode: true,
                         centerPadding: '80px',
-                        slidesToShow: 1
+                        slidesToShow: 1,
                     }
                 },
                 {
@@ -50,7 +50,7 @@ $(document).ready(() => {
                         arrows: true,
                         centerMode: true,
                         centerPadding: '0',
-                        slidesToShow: 1
+                        slidesToShow: 1,
                     }
                 }
             ]
